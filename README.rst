@@ -27,7 +27,7 @@ argument and returns a list of suitable extensions. There is a simple example:
 .. code:: python
 
     import fleep
-    print(fleep.get(path="PATH_TO_THE_FILE") # prints ['some_extension_1', 'some_extension_2']
+    print(fleep.get(path="PATH_TO_THE_FILE")) # prints ['some_extension_1', 'some_extension_2']
 
 Supported formats
 -----------------
