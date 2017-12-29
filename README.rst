@@ -1,98 +1,134 @@
 fleep
 =====
 
-File format identification library
+File format identification library for Python
 
 Getting Started
 ---------------
 
-**fleep** is a Python library, that identifies file format by file
-signature.
+**fleep** is a library that identifies file format by file signature
+(also known as "magic number").
 
 Installation
 ------------
 
-Simply run in console:
+You can install fleep using *pip*. Simply run in CLI:
 
 ::
 
     pip install fleep
 
+Requirements
+------------
+
+-  Python >= 3.0
+
 Example
 -------
 
-It has only one function **get()**, that takes path to the file as an
-argument and returns a list of suitable extensions. There is a simple example:
+fleep has only one function **get()**. It takes two arguments:
+
+-  *input* - path to the file or array of bytes
+-  *output* - type of output values: extension or mime
+
+There are some examples:
 
 .. code:: python
 
     import fleep
-    print(fleep.get(path="PATH_TO_THE_FILE")) # prints ['some_extension_1', 'some_extension_2']
+    print(fleep.get(input="path_to_jpg_image", output="extension")) # prints ['jpg']
+
+.. code:: python
+
+    import fleep
+    file = open("path_to_flac_file", "rb").read(1024)
+    print(fleep.get(input=file, output="mime")) # prints ['audio/flac']
 
 Supported formats
 -----------------
 
-There is a list of supported formats
+There is a list of supported formats:
 
-- aiff
-- cda
-- midi
-- mp3
-- m4a
-- ogg
-- oga
-- wav
-- wma
-- flac
-- 3g2
-- 3gp
-- 3gg
-- avi
-- flv
-- m4v
-- mkv
-- mov
-- mp4
-- swf
-- mpg
-- vob
-- wmv
-- ogv
-- webm
-- 7z
-- rar
-- rpm
-- tar.z
-- gz
-- zip
-- dmg
-- iso
-- dll
-- sys
-- com
-- exe
-- jar
-- ai
-- bmp
-- gif
-- jpg
-- ico
-- psd
-- tiff
-- odp
-- pps
-- ppt
-- pptx
-- ods
-- xls
-- xlsx
-- odt
-- doc
-- docx
-- pdf
-- rtf
-- sql
+*Image:*
 
+-  ai
+-  bmp
+-  gif
+-  jpg
+-  png
+-  ico
+-  psd
+-  eps
+-  tiff
+
+*Audio:*
+
+-  aiff
+-  aac
+-  midi
+-  mp3
+-  m4a
+-  oga
+-  wav
+-  wma
+-  flac
+-  mka
+
+*Video:*
+
+-  3g2
+-  3gp
+-  avi
+-  flv
+-  m4v
+-  mkv
+-  mov
+-  mp4
+-  swf
+-  mpg
+-  vob
+-  wmv
+-  asf
+-  ogv
+-  webm
+
+*Document:*
+
+-  odp
+-  ods
+-  odt
+-  doc
+-  pps
+-  ppt
+-  xls
+-  docx
+-  pptx
+-  xlsx
+-  pdf
+-  rtf
+-  epub
+
+*Archive:*
+
+-  7z
+-  rar
+-  tar.z
+-  gz
+-  zip
+-  dmg
+-  iso
+
+*Executable:*
+
+-  com
+-  exe
+-  jar
+
+*Other:*
+
+-  dll
+-  sys
+-  sql
 
 License
 -------
@@ -102,8 +138,8 @@ This project is licensed under the *MIT License*.
 Contributing
 ------------
 
-It would be nice to identify more formats. You can help us to
-deal with it!
+It would be nice to identify more formats. You can help us to deal with
+it!
 
 Authors
 -------
