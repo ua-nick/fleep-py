@@ -1,5 +1,16 @@
 {
   "data": [
+    {"extension": "ai", "mime": "application/postscript", "offset": 0, "signature": ["25 50 44 46"]},
+    {"extension": "bmp", "mime": "image/bmp", "offset": 0, "signature": ["42 4D"]},
+    {"extension": "gif", "mime": "image/gif", "offset": 0, "signature": ["47 49 46 38"]},
+    {"extension": "jpg", "mime": "image/jpeg", "offset": 0, "signature": ["FF D8 FF E0", "FF D8 FF E1", "FF D8 FF E2", "FF D8 FF E8"]},
+    {"extension": "jp2", "mime": "image/jp2", "offset": 0, "signature": ["00 00 00 0C 6A 50 20 20"]},
+    {"extension": "png", "mime": "image/png", "offset": 0, "signature": ["89 50 4E 47 0D 0A 1A 0A"]},
+    {"extension": "webp", "mime": "image/webp", "offset": 8, "signature": ["57 45 42 50"]},
+    {"extension": "ico", "mime": "image/x-icon", "offset": 0, "signature": ["00 00 01 00"]},
+    {"extension": "psd", "mime": "image/vnd.adobe.photoshop", "offset": 0, "signature": ["38 42 50 53"]},
+    {"extension": "eps", "mime": "application/postscript", "offset": 0, "signature": ["C5 D0 D3 C6", "25 21 50 53 2D 41 64 6F"]},
+    {"extension": "tiff", "mime": "image/tiff", "offset": 0, "signature": ["49 20 49", "49 49 2A 00", "4D 4D 00 2A", "4D 4D 00 2B"]},
     {"extension": "aiff", "mime": "audio/aiff", "offset": 0, "signature": ["46 4F 52 4D 00"]},
     {"extension": "aac", "mime": "audio/aac", "offset": 0, "signature": ["FF F1", "FF F9"]},
     {"extension": "midi", "mime": "audio/midi", "offset": 0, "signature": ["4D 54 68 64"]},
@@ -37,15 +48,6 @@
     {"extension": "com", "mime": "application/x-msdownload", "offset": 0, "signature": ["4D 5A"]},
     {"extension": "exe", "mime": "application/octet-stream", "offset": 0, "signature": ["4D 5A"]},
     {"extension": "jar", "mime": "application/java-archive", "offset": 0, "signature": ["50 4B 03 04"]},
-    {"extension": "ai", "mime": "application/postscript", "offset": 0, "signature": ["25 50 44 46"]},
-    {"extension": "bmp", "mime": "image/bmp", "offset": 0, "signature": ["42 4D"]},
-    {"extension": "gif", "mime": "image/gif", "offset": 0, "signature": ["47 49 46 38"]},
-    {"extension": "jpg", "mime": "image/jpeg", "offset": 0, "signature": ["FF D8 FF E0", "FF D8 FF E1", "FF D8 FF E2", "FF D8 FF E8"]},
-    {"extension": "png", "mime": "image/png", "offset": 0, "signature": ["89 50 4E 47 0D 0A 1A 0A"]},
-    {"extension": "ico", "mime": "image/x-icon", "offset": 0, "signature": ["00 00 01 00"]},
-    {"extension": "psd", "mime": "image/vnd.adobe.photoshop", "offset": 0, "signature": ["38 42 50 53"]},
-    {"extension": "eps", "mime": "application/postscript", "offset": 0, "signature": ["25 21 50 53 2D 41 64 6F"]},
-    {"extension": "tiff", "mime": "image/tiff", "offset": 0, "signature": ["49 20 49", "49 49 2A 00", "4D 4D 00 2A", "4D 4D 00 2B"]},
     {"extension": "odt", "mime": "application/vnd.oasis.opendocument.text", "offset": 0, "signature": ["50 4B 03 04"]},
     {"extension": "odp", "mime": "application/vnd.oasis.opendocument.presentation", "offset": 0, "signature": ["50 4B 03 04"]},
     {"extension": "ods", "mime": "application/vnd.oasis.opendocument.spreadsheet", "offset": 0, "signature": ["50 4B 03 04"]},
@@ -59,6 +61,6 @@
     {"extension": "pdf", "mime": "application/pdf", "offset": 0, "signature": ["25 50 44 46"]},
     {"extension": "rtf", "mime": "application/rtf", "offset": 0, "signature": ["7B 5C 72 74 66 31"]},
     {"extension": "epub", "mime": "application/epub+zip", "offset": 0, "signature": ["50 4B 03 04"]},
-    {"extension": "sql", "mime": "application/sql", "offset": 0, "signature": ["53 51 4C 69 74 65 20 66"]}
+    {"extension": "sqlite", "mime": "application/x-sqlite3", "offset": 0, "signature": ["53 51 4C 69 74 65 20 66 6F 72 6D 61 74 20 33 00"]}
   ]
 }

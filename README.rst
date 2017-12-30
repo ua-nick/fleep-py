@@ -6,8 +6,7 @@ File format identification library for Python
 Getting Started
 ---------------
 
-**fleep** is a library that identifies file format by file signature
-(also known as "magic number").
+**fleep** is a library that identifies file format by file signature (also known as "magic number").
 
 Installation
 ------------
@@ -55,7 +54,9 @@ There is a list of supported formats:
 -  bmp
 -  gif
 -  jpg
+-  jp2
 -  png
+-  webp
 -  ico
 -  psd
 -  eps
@@ -128,7 +129,7 @@ There is a list of supported formats:
 
 -  dll
 -  sys
--  sql
+-  sqlite
 
 License
 -------
@@ -138,8 +139,7 @@ This project is licensed under the *MIT License*.
 Contributing
 ------------
 
-It would be nice to identify more formats. You can help us to deal with
-it!
+It would be nice to identify more formats. You can help us to deal with it!
 
 Authors
 -------
