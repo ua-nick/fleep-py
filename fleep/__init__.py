@@ -14,28 +14,38 @@ import json
 
 
 class ArgumentError(Exception):
+    """ Exception is thrown when function argument is missed """
     pass
 
 
-abspath = os.path.abspath(os.path.dirname(__file__))
-data = json.loads(open(os.path.join(abspath, "data.json"), "r", encoding="utf-8").read())["data"]
+with open(os.path.join(os.path.dirname(__file__), "data.json")) as data_file:
+    data = json.loads(data_file.read())["data"]
 
 
 def get(**kwargs):
+    """
+    Does:
+        Main function that determines file format
+
+    Takes:
+        input -> data to be processed: path to the file or array of bytes
+        output (optional) -> format of output values: extension (by default) or MIME type
+
+    Returns:
+        List of output values
+    """
 
     if "input" not in kwargs:
         raise ArgumentError("missing argument 'input'")
-    if "output" not in kwargs:
-        raise ArgumentError("missing argument 'output'")
 
     input_data = kwargs["input"]
-    output_type = kwargs["output"]
+    output_type = kwargs["output"] if "output" in kwargs else "extension"
 
-    if type(input_data) == bytes:
+    if isinstance(input_data, bytes):
         stream = " ".join(['{:02X}'.format(byte) for byte in input_data])
-    elif type(input_data) == str:
-        file = open(input_data, "rb").read(32)
-        stream = " ".join(['{:02X}'.format(byte) for byte in file])
+    elif isinstance(input_data, str):
+        with open(input_data, "rb") as file:
+            stream = " ".join(['{:02X}'.format(byte) for byte in file.read(32)])
     else:
         raise ValueError("'input' argument type must be string or bytes")
 

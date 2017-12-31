@@ -3,10 +3,13 @@ fleep
 
 File format identification library for Python
 
+|python version| |pypi version| |license|
+
 Getting Started
 ---------------
 
-**fleep** is a library that identifies file format by file signature (also known as "magic number").
+**fleep** is a library that identifies file format by file signature
+(also known as "magic number").
 
 Installation
 ------------
@@ -27,19 +30,22 @@ Example
 
 fleep has only one function **get()**. It takes two arguments:
 
--  *input* - path to the file or array of bytes
--  *output* - type of output values: extension or mime
+-  *input* -> data to be processed: path to the file or array of bytes
+-  *output* (optional) -> format of output values: extension (by
+   default) or MIME type
 
 There are some examples:
 
 .. code:: python
 
     import fleep
+
     print(fleep.get(input="path_to_jpg_image", output="extension")) # prints ['jpg']
 
 .. code:: python
 
     import fleep
+
     file = open("path_to_flac_file", "rb").read(1024)
     print(fleep.get(input=file, output="mime")) # prints ['audio/flac']
 
@@ -139,7 +145,8 @@ This project is licensed under the *MIT License*.
 Contributing
 ------------
 
-It would be nice to identify more formats. You can help us to deal with it!
+It would be nice to identify more formats. You can help us to deal with
+it!
 
 Authors
 -------
@@ -147,3 +154,9 @@ Authors
 **Mykyta Paliienko** - `GitHub profile`_
 
 .. _GitHub profile: https://github.com/floyernick
+
+.. |python version| image:: https://img.shields.io/badge/python-3-blue.svg
+.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.3.0-blue.svg
+   :target: https://pypi.python.org/pypi/fleep
+.. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg
+   :target: https://github.com/floyernick/fleep/blob/master/LICENSE
