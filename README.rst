@@ -68,7 +68,7 @@ There is a list of supported formats:
 -  eps
 -  tiff
 
-*Raw image:*
+*Raw Image:*
 
 -  arw
 -  x3f
@@ -148,6 +148,11 @@ There is a list of supported formats:
 -  exe
 -  jar
 
+*Font:*
+
+-  ttf
+-  otf
+
 *Other:*
 
 -  dll
@@ -173,7 +178,7 @@ Authors
 .. _GitHub profile: https://github.com/floyernick
 
 .. |python version| image:: https://img.shields.io/badge/python-3-blue.svg
-.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.3.1-blue.svg
+.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.3.2-blue.svg
    :target: https://pypi.python.org/pypi/fleep
 .. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://github.com/floyernick/fleep/blob/master/LICENSE
