@@ -8,8 +8,7 @@ File format determination library for Python
 Getting Started
 ---------------
 
-**fleep** is a library that determines file format by file signature
-(also known as "magic number").
+**fleep** is a library that determines file format by file signature (also known as "magic number").
 
 Installation
 ------------
@@ -31,8 +30,7 @@ Example
 fleep has only one function **get()**. It takes two arguments:
 
 -  *input* -> data to be processed: path to the file or array of bytes
--  *output* (optional) -> format of output values: extension (by
-   default) or MIME type
+-  *output* (optional) -> format of output values: "extension" (by default) or "mime"
 
 There are some examples:
 
@@ -40,7 +38,7 @@ There are some examples:
 
     import fleep
 
-    print(fleep.get(input="path_to_jpg_image", output="extension")) # prints ['jpg']
+    print(fleep.get(input="path_to_jpg_image")) # prints ['jpg']
 
 .. code:: python
 
@@ -128,6 +126,9 @@ There is a list of supported formats:
 -  docx
 -  pptx
 -  xlsx
+-  pages
+-  key
+-  numbers
 -  pdf
 -  rtf
 -  epub
@@ -167,8 +168,7 @@ This project is licensed under the *MIT License*.
 Contributing
 ------------
 
-It would be nice to determine more formats. You can help us to deal with
-it!
+It would be nice to determine more formats. You can help us to deal with it!
 
 Authors
 -------
@@ -178,7 +178,7 @@ Authors
 .. _GitHub profile: https://github.com/floyernick
 
 .. |python version| image:: https://img.shields.io/badge/python-3-blue.svg
-.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.3.2-blue.svg
+.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.3.3-blue.svg
    :target: https://pypi.python.org/pypi/fleep
 .. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://github.com/floyernick/fleep/blob/master/LICENSE

@@ -45,7 +45,7 @@ def get(**kwargs):
         stream = " ".join(['{:02X}'.format(byte) for byte in input_data])
     elif isinstance(input_data, str):
         with open(input_data, "rb") as file:
-            stream = " ".join(['{:02X}'.format(byte) for byte in file.read(32)])
+            stream = " ".join(['{:02X}'.format(byte) for byte in file.read(128)])
     else:
         raise ValueError("'input' argument type must be string or bytes")
 
