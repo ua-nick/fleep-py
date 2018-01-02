@@ -1,14 +1,14 @@
 fleep
 =====
 
-File format identification library for Python
+File format determination library for Python
 
 |python version| |pypi version| |license|
 
 Getting Started
 ---------------
 
-**fleep** is a library that identifies file format by file signature
+**fleep** is a library that determines file format by file signature
 (also known as "magic number").
 
 Installation
@@ -67,6 +67,23 @@ There is a list of supported formats:
 -  psd
 -  eps
 -  tiff
+
+*Raw image:*
+
+-  arw
+-  x3f
+-  srw
+-  pef
+-  rw2
+-  raw
+-  orf
+-  nef
+-  nrw
+-  dng
+-  raf
+-  erf
+-  crw
+-  cr2
 
 *Audio:*
 
@@ -145,7 +162,7 @@ This project is licensed under the *MIT License*.
 Contributing
 ------------
 
-It would be nice to identify more formats. You can help us to deal with
+It would be nice to determine more formats. You can help us to deal with
 it!
 
 Authors
@@ -156,7 +173,7 @@ Authors
 .. _GitHub profile: https://github.com/floyernick
 
 .. |python version| image:: https://img.shields.io/badge/python-3-blue.svg
-.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.3.0-blue.svg
+.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.3.1-blue.svg
    :target: https://pypi.python.org/pypi/fleep
 .. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://github.com/floyernick/fleep/blob/master/LICENSE

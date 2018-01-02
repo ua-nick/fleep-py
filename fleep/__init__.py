@@ -3,7 +3,7 @@
 
 
 """
-Description: File format identification library
+Description: File format determination library
 Author: Mykyta Paliienko
 License: MIT
 """
