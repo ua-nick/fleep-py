@@ -52,15 +52,17 @@ def get(**kwargs):
     if output_type not in ["extension", "mime"]:
         raise ValueError("'output' argument value must be 'extension' or 'mime'")
 
-    output_data = []
+    output_data = dict()
 
     for element in data:
         for signature in element["signature"]:
             offset = element["offset"] * 2 + element["offset"]
             if signature == stream[offset:len(signature) + offset]:
                 if output_type == "extension":
-                    output_data.append(element["extension"])
+                    output_data[element["extension"]] = len(signature)
                 elif output_type == "mime":
-                    output_data.append(element["mime"])
+                    output_data[element["mime"]] = len(signature)
 
-    return list(set(output_data))
+    output_data = [element for element in sorted(output_data, key=output_data.get, reverse=True)]
+
+    return output_data
