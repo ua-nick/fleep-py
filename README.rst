@@ -52,113 +52,113 @@ Supported formats
 
 There is a list of supported formats:
 
-*Image:*
+*IMAGE:*
 
--  ai
--  bmp
--  gif
--  jpg
--  jp2
--  png
--  webp
--  ico
--  psd
--  eps
--  tiff
+-  AI (Adobe Illustrator Artwork)
+-  BMP (Bitmap Picture)
+-  GIF (Graphics Interchange Format)
+-  JPEG (Joint Photographic Experts Group)
+-  JP2 (JPEG 2000)
+-  PNG (Portable Network Graphics)
+-  WEBP (Google Web Image)
+-  ICO (Windows Icon)
+-  PSD (Photoshop Document)
+-  EPS (Encapsulated PostScript)
+-  TIFF (Tagged Image File Format)
 
-*Raw Image:*
+*RAW IMAGE:*
 
--  arw
--  x3f
--  srw
--  pef
--  rw2
--  raw
--  orf
--  nef
--  nrw
--  dng
--  raf
--  erf
--  crw
--  cr2
+-  RAW (Raw Image)
+-  ARW (Sony RAW)
+-  X3F (Sigma RAW)
+-  SRW (Samsung RAW)
+-  PEF (Pentax RAW)
+-  RW2 (Panasonic Lumix RAW)
+-  ORF (Olympus RAW)
+-  NEF (Nikon Electronic Format)
+-  NRW (Nikon Coolpix RAW)
+-  DNG (Adobe Digital Negative)
+-  RAF (Fuji RAW)
+-  ERF (Epson RAW)
+-  CRW (Canon RAW)
+-  CR2 (Canon RAW Version 2)
 
-*Audio:*
+*AUDIO:*
 
--  aiff
--  aac
--  midi
--  mp3
--  m4a
--  oga
--  wav
--  wma
--  flac
--  mka
+-  AIFF (Audio Interchange File Format)
+-  AAC (Advanced Audio Coding)
+-  MIDI (Musical Instrument Digital Interface)
+-  MP3 (MPEG Audio Layer III)
+-  M4A (Apple Audio Container)
+-  OGA (OGG Audio)
+-  WAV (Waveform Audio File Format)
+-  WMA (Windows Media Audio)
+-  FLAC (Free Lossless Audio Codec)
+-  MKA (Matroska Audio)
 
-*Video:*
+*VIDEO:*
 
--  3g2
--  3gp
--  avi
--  flv
--  m4v
--  mkv
--  mov
--  mp4
--  swf
--  mpg
--  vob
--  wmv
--  asf
--  ogv
--  webm
+-  3G2 (3GPP2 File Format)
+-  3GP (3GPP File Format)
+-  AVI (Audio Video Interleave)
+-  FLV (Flash Video)
+-  M4V (Apple Video Container)
+-  MKV (Matroska Video)
+-  MOV (Apple QuickTime Movie)
+-  MP4 (MPEG-4 Video)
+-  SWF (Small Web Format)
+-  MPG (MPEG Video)
+-  VOB (DVD-Video Object)
+-  WMV (Windows Media Video)
+-  ASF (Advanced Systems Format)
+-  OGV (OGG Video)
+-  WEBM (Google Web Movie)
 
-*Document:*
+*DOCUMENT:*
 
--  odp
--  ods
--  odt
--  doc
--  pps
--  ppt
--  xls
--  docx
--  pptx
--  xlsx
--  pages
--  key
--  numbers
--  pdf
--  rtf
--  epub
+-  ODP (OpenDocument Presentation)
+-  ODS (OpenDocument Spreadsheet)
+-  ODT (OpenDocument Text)
+-  DOC (Microsoft Word Binary File Format)
+-  PPS (Microsoft PowerPoint Binary File Format)
+-  PPT (Microsoft PowerPoint Binary File Format)
+-  XLS (Microsoft Excel Binary File Format)
+-  DOCX (Word Extensions to the Office Open XML File Format)
+-  PPTX (PowerPoint Extensions to the Office Open XML File Format)
+-  XLSX (Excel Extensions to the Office Open XML File Format)
+-  PAGES (Apple Pages Document)
+-  KEY (Apple Keynote Presentation)
+-  NUMBERS (Apple Numbers Spreadsheet)
+-  PDF (Portable Document Format)
+-  RTF (Rich Text Format)
+-  EPUB (Electronic Publication)
 
-*Archive:*
+*ARCHIVE:*
 
--  7z
--  rar
--  tar.z
--  gz
--  zip
--  dmg
--  iso
+-  7Z (7-Zip Archive)
+-  RAR (Roshal Archive)
+-  TAR.Z (GNU Compressed Archive)
+-  GZ (GZIP Archive)
+-  ZIP (ZIP Archive)
+-  DMG (Apple Disk Image)
+-  ISO (Disk Image)
 
-*Executable:*
+*EXECUTABLE:*
 
--  com
--  exe
--  jar
+-  COM (Component Object Model)
+-  EXE (Portable Executable)
+-  JAR (Java Archive)
 
-*Font:*
+*FONT:*
 
--  ttf
--  otf
+-  TTF (TrueType File)
+-  OTF (OpenType File)
 
-*Other:*
+*OTHER:*
 
--  dll
--  sys
--  sqlite
+-  DLL (Dynamic Link Library)
+-  SYS (Windows System File)
+-  SQLITE (SQLite Database File)
 
 License
 -------
@@ -178,7 +178,7 @@ Authors
 .. _GitHub profile: https://github.com/floyernick
 
 .. |python version| image:: https://img.shields.io/badge/python-3-blue.svg
-.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.3.3-blue.svg
+.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.3.4-blue.svg
    :target: https://pypi.python.org/pypi/fleep
 .. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://github.com/floyernick/fleep/blob/master/LICENSE
