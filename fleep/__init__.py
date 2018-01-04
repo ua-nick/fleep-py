@@ -13,56 +13,72 @@ import os
 import json
 
 
-class ArgumentError(Exception):
-    """ Exception is thrown when function argument is missed """
-    pass
-
-
-with open(os.path.join(os.path.dirname(__file__), "data.json")) as data_file:
-    data = json.loads(data_file.read())["data"]
-
-
-def get(**kwargs):
+class Info:
     """
     Does:
-        Main function that determines file format
+        Generates object with given arguments
 
     Takes:
-        input -> data to be processed: path to the file or array of bytes
-        output (optional) -> format of output values: extension (by default) or MIME type
+        type_ -> list of file types
+        extension -> list of file extensions
+        mime -> list of file MIME types
 
     Returns:
-        List of output values
+        Object
     """
 
-    if "input" not in kwargs:
-        raise ArgumentError("missing argument 'input'")
+    def __init__(self, type_, extension, mime):
+        self.type = type_
+        self.extension = extension
+        self.mime = mime
 
-    input_data = kwargs["input"]
-    output_type = kwargs["output"] if "output" in kwargs else "extension"
+    def type_matches(self, type_):
+        """ Checks if file type matches with given type """
+        return type_ in self.type
 
-    if isinstance(input_data, bytes):
-        stream = " ".join(['{:02X}'.format(byte) for byte in input_data])
-    elif isinstance(input_data, str):
-        with open(input_data, "rb") as file:
-            stream = " ".join(['{:02X}'.format(byte) for byte in file.read(128)])
-    else:
+    def extension_matches(self, extension):
+        """ Checks if file extension matches with given extension """
+        return extension in self.extension
+
+    def mime_matches(self, mime):
+        """ Checks if file MIME type matches with given MIME type """
+        return mime in self.mime
+
+
+def get(obj):
+    """
+    Does:
+        Determines file format and picks suitable file types, extensions and MIME types
+
+    Takes:
+        obj -> array of bytes (128 bytes are enough)
+
+    Returns:
+        Instance of class Info
+    """
+
+    if not isinstance(obj, bytes):
         raise ValueError("'input' argument type must be string or bytes")
 
-    if output_type not in ["extension", "mime"]:
-        raise ValueError("'output' argument value must be 'extension' or 'mime'")
+    with open(os.path.join(os.path.dirname(__file__), "data.json")) as data_file:
+        data = json.loads(data_file.read())["data"]
 
-    output_data = dict()
+    info = {
+        "type": dict(),
+        "extension": dict(),
+        "mime": dict()
+    }
+
+    stream = " ".join(['{:02X}'.format(byte) for byte in obj])
 
     for element in data:
         for signature in element["signature"]:
             offset = element["offset"] * 2 + element["offset"]
             if signature == stream[offset:len(signature) + offset]:
-                if output_type == "extension":
-                    output_data[element["extension"]] = len(signature)
-                elif output_type == "mime":
-                    output_data[element["mime"]] = len(signature)
+                for key in ["type", "extension", "mime"]:
+                    info[key][element[key]] = len(signature)
 
-    output_data = [element for element in sorted(output_data, key=output_data.get, reverse=True)]
+    for key in ["type", "extension", "mime"]:
+        info[key] = [element for element in sorted(info[key], key=info[key].get, reverse=True)]
 
-    return output_data
+    return Info(info["type"], info["extension"], info["mime"])

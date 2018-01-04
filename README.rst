@@ -24,37 +24,76 @@ Requirements
 
 -  Python >= 3.0
 
-Example
--------
+In Use
+------
 
-fleep has only one function **get()**. It takes two arguments:
+fleep has main function *get()* that determines file format. It takes an array of bytes (128 bytes are enough) as an argument and returns an instance of class *Info* with the following arguments:
 
--  *input* -> data to be processed: path to the file or array of bytes
--  *output* (optional) -> format of output values: "extension" (by default) or "mime"
+-  *type* -> list of suitable file types
+-  *extension* -> list of suitable file extensions
+-  *mime* -> list of suitable file MIME types
 
-Function returns a list, because magic number may refer to several formats.
+You may presume that first element in list will be the most suitable.
 
-There are some examples:
+Also an instance of class *Info* has the following methods:
+
+-  *type_matches()* -> checks if file type matches with given type as an argument
+-  *extension_matches()* -> checks if file extension matches with given extension as an argument
+-  *mime_matches()* -> checks if file MIME type matches with given MIME type as an argument
+
+Examples
+--------
 
 .. code:: python
 
     import fleep
 
-    print(fleep.get(input="path_to_windows_media_file")) # prints ['wma', 'wmv', 'asf']
 
-.. code:: python
+    with open("testfile", "rb") as file:
+        info = fleep.get(file.read(128))
 
-    import fleep
+    print(info.type)  # prints ['image']
+    print(info.extension)  # prints ['png']
+    print(info.mime)  # prints ['image/png']
 
-    file = open("path_to_flac_audio_file", "rb").read(1024)
-    print(fleep.get(input=file, output="mime")) # prints ['audio/flac']
+    print(info.type_matches("image"))  # prints True
+    print(info.extension_matches("gif"))  # prints False
+    print(info.mime_matches("image/png"))  # prints True
 
-Supported formats
+Tests
+-----
+
+You can find tests in *tests* folder. There are results of *speedtest*:
+
+**Workstation**
+
+-  Windows 10 Home x64 bit
+-  Intel Pentium G4620 3.70GHz
+-  Kingston DDR4-2400 4096MB x2
+-  Kingston SSD 120GB
+
+**Results**
+
++-----------+-----------------+
+| Iteration | Max time (sec.) |
++===========+=================+
+| 1         | 0.01580         |
++-----------+-----------------+
+| 2         | 0.00802         |
++-----------+-----------------+
+| 3         | 0.00501         |
++-----------+-----------------+
+| 4         | 0.01591         |
++-----------+-----------------+
+| 5         | 0.00651         |
++-----------+-----------------+
+
+Supported Formats
 -----------------
 
 There is a list of supported formats:
 
-*IMAGE:*
+*Image:*
 
 -  AI (Adobe Illustrator Artwork)
 -  BMP (Bitmap Picture)
@@ -67,9 +106,6 @@ There is a list of supported formats:
 -  PSD (Photoshop Document)
 -  EPS (Encapsulated PostScript)
 -  TIFF (Tagged Image File Format)
-
-*RAW IMAGE:*
-
 -  RAW (Raw Image)
 -  ARW (Sony RAW)
 -  X3F (Sigma RAW)
@@ -85,7 +121,7 @@ There is a list of supported formats:
 -  CRW (Canon RAW)
 -  CR2 (Canon RAW Version 2)
 
-*AUDIO:*
+*Audio:*
 
 -  AIFF (Audio Interchange File Format)
 -  AAC (Advanced Audio Coding)
@@ -103,7 +139,7 @@ There is a list of supported formats:
 -  AC3 (Audio Codec 3)
 -  VOC (Creative Voice File)
 
-*VIDEO:*
+*Video:*
 
 -  3G2 (3GPP2 File Format)
 -  3GP (3GPP File Format)
@@ -121,7 +157,7 @@ There is a list of supported formats:
 -  OGV (OGG Video)
 -  WEBM (Google Web Movie)
 
-*DOCUMENT:*
+*Document:*
 
 -  ODP (OpenDocument Presentation)
 -  ODS (OpenDocument Spreadsheet)
@@ -141,7 +177,7 @@ There is a list of supported formats:
 -  EPUB (Electronic Publication)
 -  XML (Extensible Markup Language)
 
-*ARCHIVE:*
+*Archive:*
 
 -  7Z (7-Zip Archive)
 -  RAR (Roshal Archive)
@@ -151,22 +187,30 @@ There is a list of supported formats:
 -  DMG (Apple Disk Image)
 -  ISO (Disk Image)
 
-*EXECUTABLE:*
+*Executable:*
 
 -  COM (Component Object Model)
 -  EXE (Portable Executable)
 -  JAR (Java Archive)
 
-*FONT:*
+*Font:*
 
 -  TTF (TrueType File)
 -  OTF (OpenType File)
 
-*OTHER:*
+*System:*
 
 -  DLL (Dynamic Link Library)
 -  SYS (Windows System File)
+
+*Database:*
+
 -  SQLITE (SQLite Database File)
+
+Development Status
+------------------
+
+fleep is in *Alpha* status, so we add new features quite often.
 
 License
 -------
@@ -186,7 +230,7 @@ Authors
 .. _GitHub profile: https://github.com/floyernick
 
 .. |python version| image:: https://img.shields.io/badge/python-3-blue.svg
-.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.3.6-blue.svg
+.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.4.0-blue.svg
    :target: https://pypi.python.org/pypi/fleep
 .. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://github.com/floyernick/fleep/blob/master/LICENSE
