@@ -32,19 +32,21 @@ fleep has only one function **get()**. It takes two arguments:
 -  *input* -> data to be processed: path to the file or array of bytes
 -  *output* (optional) -> format of output values: "extension" (by default) or "mime"
 
+Function returns a list, because magic number may refer to several formats.
+
 There are some examples:
 
 .. code:: python
 
     import fleep
 
-    print(fleep.get(input="path_to_jpg_image")) # prints ['jpg']
+    print(fleep.get(input="path_to_windows_media_file")) # prints ['wma', 'wmv', 'asf']
 
 .. code:: python
 
     import fleep
 
-    file = open("path_to_flac_file", "rb").read(1024)
+    file = open("path_to_flac_audio_file", "rb").read(1024)
     print(fleep.get(input=file, output="mime")) # prints ['audio/flac']
 
 Supported formats
@@ -95,6 +97,11 @@ There is a list of supported formats:
 -  WMA (Windows Media Audio)
 -  FLAC (Free Lossless Audio Codec)
 -  MKA (Matroska Audio)
+-  AU (Unix sound)
+-  RA (Real Audio File)
+-  AMR (Adaptive Multi-Rate Audio Codec)
+-  AC3 (Audio Codec 3)
+-  VOC (Creative Voice File)
 
 *VIDEO:*
 
@@ -132,6 +139,7 @@ There is a list of supported formats:
 -  PDF (Portable Document Format)
 -  RTF (Rich Text Format)
 -  EPUB (Electronic Publication)
+-  XML (Extensible Markup Language)
 
 *ARCHIVE:*
 
@@ -178,7 +186,7 @@ Authors
 .. _GitHub profile: https://github.com/floyernick
 
 .. |python version| image:: https://img.shields.io/badge/python-3-blue.svg
-.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.3.5-blue.svg
+.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.3.6-blue.svg
    :target: https://pypi.python.org/pypi/fleep
 .. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://github.com/floyernick/fleep/blob/master/LICENSE
