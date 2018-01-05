@@ -13,6 +13,10 @@ import os
 import json
 
 
+with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data.json")) as data_file:
+    data = json.loads(data_file.read())["data"]
+
+
 class Info:
     """
     Does:
@@ -51,17 +55,14 @@ def get(obj):
         Determines file format and picks suitable file types, extensions and MIME types
 
     Takes:
-        obj -> array of bytes (128 bytes are enough)
+        obj -> byte sequence (128 bytes are enough)
 
     Returns:
         Instance of class Info
     """
 
     if not isinstance(obj, bytes):
-        raise ValueError("'input' argument type must be string or bytes")
-
-    with open(os.path.join(os.path.dirname(__file__), "data.json")) as data_file:
-        data = json.loads(data_file.read())["data"]
+        raise TypeError("object type must be bytes")
 
     info = {
         "type": dict(),

@@ -27,7 +27,7 @@ Requirements
 In Use
 ------
 
-fleep has main function *get()* that determines file format. It takes an array of bytes (128 bytes are enough) as an argument and returns an instance of class *Info* with the following arguments:
+fleep has main function *get()* that determines file format. It takes byte sequence (128 bytes are enough) as an argument and returns an instance of class *Info* with the following arguments:
 
 -  *type* -> list of suitable file types
 -  *extension* -> list of suitable file extensions
@@ -48,8 +48,7 @@ Examples
 
     import fleep
 
-
-    with open("testfile", "rb") as file:
+    with open("png_image", "rb") as file:
         info = fleep.get(file.read(128))
 
     print(info.type)  # prints ['image']
@@ -63,10 +62,11 @@ Examples
 Tests
 -----
 
-You can find tests in *tests* folder. There are results of *speedtest*:
+You can find tests in *tests* folder. There are results of *speed test*:
 
 **Workstation**
 
+-  Python 3.6 x64 bit
 -  Windows 10 Home x64 bit
 -  Intel Pentium G4620 3.70GHz
 -  Kingston DDR4-2400 4096MB x2
@@ -74,19 +74,19 @@ You can find tests in *tests* folder. There are results of *speedtest*:
 
 **Results**
 
-+-----------+-----------------+
-| Iteration | Max time (sec.) |
-+===========+=================+
-| 1         | 0.01580         |
-+-----------+-----------------+
-| 2         | 0.00802         |
-+-----------+-----------------+
-| 3         | 0.00501         |
-+-----------+-----------------+
-| 4         | 0.01591         |
-+-----------+-----------------+
-| 5         | 0.00651         |
-+-----------+-----------------+
++-----------+------------------+------------------+------------------+
+| Iteration | Min. time (sec.) | Max. time (sec.) | Avg. time (sec.) |
++===========+==================+==================+==================+
+| 1         | 0.0              | 0.0010326        | 0.0000847        |
++-----------+------------------+------------------+------------------+
+| 2         | 0.0              | 0.0010331        | 0.0000817        |
++-----------+------------------+------------------+------------------+
+| 3         | 0.0              | 0.0010362        | 0.0000820        |
++-----------+------------------+------------------+------------------+
+| 4         | 0.0              | 0.0010309        | 0.0000832        |
++-----------+------------------+------------------+------------------+
+| 5         | 0.0              | 0.0010326        | 0.0000836        |
++-----------+------------------+------------------+------------------+
 
 Supported Formats
 -----------------
@@ -230,7 +230,7 @@ Authors
 .. _GitHub profile: https://github.com/floyernick
 
 .. |python version| image:: https://img.shields.io/badge/python-3-blue.svg
-.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.4.0-blue.svg
+.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.4.1-blue.svg
    :target: https://pypi.python.org/pypi/fleep
 .. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://github.com/floyernick/fleep/blob/master/LICENSE
