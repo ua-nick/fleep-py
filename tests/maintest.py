@@ -1,6 +1,5 @@
 import fleep
 
-
 with open("testfile", "rb") as file:
     info = fleep.get(file.read(128))
 

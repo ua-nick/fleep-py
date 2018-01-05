@@ -1,7 +1,6 @@
 import time
 import fleep
 
-
 with open("testfile", "rb") as file:
     stream = file.read(128)
 

@@ -91,125 +91,125 @@ You can find tests in *tests* folder. There are results of *speed test*:
 Supported Formats
 -----------------
 
-There is a list of supported formats:
+There is a list of supported formats (in alphabetical order):
 
 *Image:*
 
--  AI (Adobe Illustrator Artwork)
--  BMP (Bitmap Picture)
--  GIF (Graphics Interchange Format)
--  JPEG (Joint Photographic Experts Group)
--  JP2 (JPEG 2000)
--  PNG (Portable Network Graphics)
--  WEBP (Google Web Picture)
--  ICO (Windows Icon)
--  PSD (Photoshop Document)
--  EPS (Encapsulated PostScript)
--  TIFF (Tagged Image File Format)
--  RAW (Raw Image)
--  ARW (Sony RAW)
--  X3F (Sigma RAW)
--  SRW (Samsung RAW)
--  PEF (Pentax RAW)
--  RW2 (Panasonic Lumix RAW)
--  ORF (Olympus RAW)
--  NEF (Nikon Electronic Format)
--  NRW (Nikon Coolpix RAW)
--  DNG (Adobe Digital Negative)
--  RAF (Fuji RAW)
--  ERF (Epson RAW)
--  CRW (Canon RAW)
--  CR2 (Canon RAW Version 2)
+-  AI
+-  ARW
+-  BMP
+-  CR2
+-  CRW
+-  DNG
+-  EPS
+-  ERF
+-  GIF
+-  ICO
+-  JP2
+-  JPEG
+-  NEF
+-  NRW
+-  ORF
+-  PEF
+-  PNG
+-  PSD
+-  RAF
+-  RAW
+-  RW2
+-  SRW
+-  TIFF
+-  WEBP
+-  X3F
 
 *Audio:*
 
--  AIFF (Audio Interchange File Format)
--  AAC (Advanced Audio Coding)
--  MIDI (Musical Instrument Digital Interface)
--  MP3 (MPEG Audio Layer III)
--  M4A (Apple Audio Container)
--  OGA (OGG Audio)
--  WAV (Waveform Audio File Format)
--  WMA (Windows Media Audio)
--  FLAC (Free Lossless Audio Codec)
--  MKA (Matroska Audio)
--  AU (Unix sound)
--  RA (Real Audio File)
--  AMR (Adaptive Multi-Rate Audio Codec)
--  AC3 (Audio Codec 3)
--  VOC (Creative Voice File)
+-  AAC
+-  AC3
+-  AIFF
+-  AMR
+-  AU
+-  FLAC
+-  M4A
+-  MIDI
+-  MKA
+-  MP3
+-  OGA
+-  RA
+-  VOC
+-  WAV
+-  WMA
 
 *Video:*
 
--  3G2 (3GPP2 File Format)
--  3GP (3GPP File Format)
--  AVI (Audio Video Interleave)
--  FLV (Flash Video)
--  M4V (Apple Video Container)
--  MKV (Matroska Video)
--  MOV (Apple QuickTime Movie)
--  MP4 (MPEG-4 Video)
--  SWF (Small Web Format)
--  MPG (MPEG Video)
--  VOB (DVD-Video Object)
--  WMV (Windows Media Video)
--  ASF (Advanced Systems Format)
--  OGV (OGG Video)
--  WEBM (Google Web Movie)
+-  3G2
+-  3GP
+-  ASF
+-  AVI
+-  FLV
+-  M4V
+-  MKV
+-  MOV
+-  MP4
+-  MPG
+-  OGV
+-  SWF
+-  VOB
+-  WEBM
+-  WMV
 
 *Document:*
 
--  ODP (OpenDocument Presentation)
--  ODS (OpenDocument Spreadsheet)
--  ODT (OpenDocument Text)
--  DOC (Microsoft Word Binary File Format)
--  PPS (Microsoft PowerPoint Binary File Format)
--  PPT (Microsoft PowerPoint Binary File Format)
--  XLS (Microsoft Excel Binary File Format)
--  DOCX (Word Extensions to the Office Open XML File Format)
--  PPTX (PowerPoint Extensions to the Office Open XML File Format)
--  XLSX (Excel Extensions to the Office Open XML File Format)
--  PAGES (Apple Pages Document)
--  KEY (Apple Keynote Presentation)
--  NUMBERS (Apple Numbers Spreadsheet)
--  PDF (Portable Document Format)
--  RTF (Rich Text Format)
--  EPUB (Electronic Publication)
--  XML (Extensible Markup Language)
+-  DOC
+-  DOCX
+-  EPUB
+-  KEY
+-  NUMBERS
+-  ODP
+-  ODS
+-  ODT
+-  PAGES
+-  PDF
+-  PPS
+-  PPT
+-  PPTX
+-  RTF
+-  XLS
+-  XLSX
+-  XML
 
 *Archive:*
 
--  7Z (7-Zip Archive)
--  RAR (Roshal Archive)
--  TAR.Z (GNU Compressed Archive)
--  GZ (GZIP Archive)
--  ZIP (ZIP Archive)
--  DMG (Apple Disk Image)
--  ISO (Disk Image)
+-  7Z
+-  DMG
+-  GZ
+-  ISO
+-  RAR
+-  TAR.Z
+-  ZIP
 
 *Executable:*
 
--  COM (Component Object Model)
--  EXE (Portable Executable)
--  JAR (Java Archive)
+-  COM
+-  EXE
+-  JAR
 
 *Font:*
 
--  TTF (TrueType File)
--  OTF (OpenType File)
--  WOFF (Web Open Font Format)
--  WOFF2 (Web Open Font Format 2.0)
+-  OTF
+-  TTF
+-  WOFF
+-  WOFF2
 
 *System:*
 
--  CAT (Windows Catalog File)
--  DLL (Dynamic Link Library)
--  SYS (Windows System File)
--  REG (Windows Registry File)
+-  CAT
+-  DLL
+-  REG
+-  SYS
 
 *Database:*
 
--  SQLITE (SQLite Database File)
+-  SQLITE
 
 Development Status
 ------------------
@@ -234,7 +234,7 @@ Authors
 .. _GitHub profile: https://github.com/floyernick
 
 .. |python version| image:: https://img.shields.io/badge/python-3-blue.svg
-.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.4.2-blue.svg
+.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.4.3-blue.svg
    :target: https://pypi.python.org/pypi/fleep
 .. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://github.com/floyernick/fleep/blob/master/LICENSE
