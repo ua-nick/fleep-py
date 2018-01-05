@@ -101,7 +101,7 @@ There is a list of supported formats:
 -  JPEG (Joint Photographic Experts Group)
 -  JP2 (JPEG 2000)
 -  PNG (Portable Network Graphics)
--  WEBP (Google Web Image)
+-  WEBP (Google Web Picture)
 -  ICO (Windows Icon)
 -  PSD (Photoshop Document)
 -  EPS (Encapsulated PostScript)
@@ -197,11 +197,15 @@ There is a list of supported formats:
 
 -  TTF (TrueType File)
 -  OTF (OpenType File)
+-  WOFF (Web Open Font Format)
+-  WOFF2 (Web Open Font Format 2.0)
 
 *System:*
 
+-  CAT (Windows Catalog File)
 -  DLL (Dynamic Link Library)
 -  SYS (Windows System File)
+-  REG (Windows Registry File)
 
 *Database:*
 
@@ -230,7 +234,7 @@ Authors
 .. _GitHub profile: https://github.com/floyernick
 
 .. |python version| image:: https://img.shields.io/badge/python-3-blue.svg
-.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.4.1-blue.svg
+.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.4.2-blue.svg
    :target: https://pypi.python.org/pypi/fleep
 .. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://github.com/floyernick/fleep/blob/master/LICENSE
