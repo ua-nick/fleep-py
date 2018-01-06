@@ -44,6 +44,8 @@ Also an instance of class *Info* has the following methods:
 Examples
 --------
 
+You can find examples in *examples* folder. There is a simple example:
+
 .. code:: python
 
     import fleep
@@ -69,24 +71,26 @@ You can find tests in *tests* folder. There are results of *speed test*:
 -  Python 3.6 x64 bit
 -  Windows 10 Home x64 bit
 -  Intel Pentium G4620 3.70GHz
--  Kingston DDR4-2400 4096MB x2
--  Kingston SSD 120GB
+-  Kingston DDR4-2400 8192MB
+-  Kingston SSD 120GB 550MB/s
 
 **Results**
 
-+-----------+------------------+------------------+------------------+
-| Iteration | Min. time (sec.) | Max. time (sec.) | Avg. time (sec.) |
-+===========+==================+==================+==================+
-| 1         | 0.0              | 0.0010326        | 0.0000847        |
-+-----------+------------------+------------------+------------------+
-| 2         | 0.0              | 0.0010331        | 0.0000817        |
-+-----------+------------------+------------------+------------------+
-| 3         | 0.0              | 0.0010362        | 0.0000820        |
-+-----------+------------------+------------------+------------------+
-| 4         | 0.0              | 0.0010309        | 0.0000832        |
-+-----------+------------------+------------------+------------------+
-| 5         | 0.0              | 0.0010326        | 0.0000836        |
-+-----------+------------------+------------------+------------------+
+*Notice:* 0.0012345 -> time in seconds
+
++-----------+---------+-----------+-----------+
+| Iteration | Minimum | Maximum   | Average   |
++===========+=========+===========+===========+
+| 1         | 0.0     | 0.0005312 | 0.0000851 |
++-----------+---------+-----------+-----------+
+| 2         | 0.0     | 0.0005360 | 0.0000858 |
++-----------+---------+-----------+-----------+
+| 3         | 0.0     | 0.0005236 | 0.0000837 |
++-----------+---------+-----------+-----------+
+| 4         | 0.0     | 0.0005035 | 0.0000833 |
++-----------+---------+-----------+-----------+
+| 5         | 0.0     | 0.0005295 | 0.0000835 |
++-----------+---------+-----------+-----------+
 
 Supported Formats
 -----------------
@@ -234,7 +238,7 @@ Authors
 .. _GitHub profile: https://github.com/floyernick
 
 .. |python version| image:: https://img.shields.io/badge/python-3-blue.svg
-.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.4.3-blue.svg
+.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.4.4-blue.svg
    :target: https://pypi.python.org/pypi/fleep
 .. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://github.com/floyernick/fleep/blob/master/LICENSE
