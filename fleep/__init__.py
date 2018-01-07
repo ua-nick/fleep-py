@@ -82,3 +82,18 @@ def get(obj):
         info[key] = [element for element in sorted(info[key], key=info[key].get, reverse=True)]
 
     return Info(info["type"], info["extension"], info["mime"])
+
+
+def supported_types():
+    """ Returns a list of supported file types """
+    return sorted(set([x["type"] for x in data]))
+
+
+def supported_extensions():
+    """ Returns a list of supported file extensions """
+    return sorted(set([x["extension"] for x in data]))
+
+
+def supported_mimes():
+    """ Returns a list of supported file MIME types """
+    return sorted(set([x["mime"] for x in data]))

@@ -7,6 +7,6 @@ print(info.type)
 print(info.extension)
 print(info.mime)
 
-print(info.type_matches("image"))
+print(info.type_matches("raster-image"))
 print(info.extension_matches("gif"))
 print(info.mime_matches("image/png"))

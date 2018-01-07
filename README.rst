@@ -22,7 +22,7 @@ You can install fleep using *pip*. Simply run in CLI:
 Requirements
 ------------
 
--  Python >= 3.0
+-  Python >= 3.1
 
 In Use
 ------
@@ -40,6 +40,12 @@ Also an instance of class *Info* has the following methods:
 -  *type_matches()* -> checks if file type matches with given type as an argument
 -  *extension_matches()* -> checks if file extension matches with given extension as an argument
 -  *mime_matches()* -> checks if file MIME type matches with given MIME type as an argument
+
+There are 3 more functions:
+
+-  *supported_types()* -> returns a list of supported file types
+-  *supported_extensions()* -> returns a list of supported file extensions
+-  *supported_mimes()* -> returns a list of supported file MIME types
 
 Examples
 --------
@@ -76,7 +82,7 @@ You can find tests in *tests* folder. There are results of *speed test*:
 
 **Results**
 
-*Notice:* 0.0012345 -> time in seconds
+*Note:* 0.0012345 -> time in seconds
 
 +-----------+---------+-----------+-----------+
 | Iteration | Minimum | Maximum   | Average   |
@@ -97,33 +103,52 @@ Supported Formats
 
 There is a list of supported formats (in alphabetical order):
 
-*Image:*
+*Raster Image:*
 
--  AI
--  ARW
 -  BMP
--  CR2
--  CRW
--  DNG
--  EPS
--  ERF
 -  GIF
 -  ICO
 -  JP2
 -  JPEG
+-  PNG
+-  PSD
+-  TIFF
+-  WEBP
+
+*Raw Image:*
+
+-  ARW
+-  CR2
+-  CRW
+-  DNG
+-  ERF
 -  NEF
 -  NRW
 -  ORF
 -  PEF
--  PNG
--  PSD
 -  RAF
 -  RAW
 -  RW2
 -  SRW
--  TIFF
--  WEBP
 -  X3F
+
+*Vector Image:*
+
+-  AI
+-  EPS
+
+*3D Image:*
+
+-  C4D
+-  FBX
+-  MA
+-  MS3D
+-  MTL
+-  OBJ
+-  PLY
+-  WRL
+-  X3D
+-  XSI
 
 *Audio:*
 
@@ -206,9 +231,12 @@ There is a list of supported formats (in alphabetical order):
 
 *System:*
 
+-  CAB
 -  CAT
 -  DLL
+-  DRV
 -  REG
+-  SDB
 -  SYS
 
 *Database:*
@@ -238,7 +266,7 @@ Authors
 .. _GitHub profile: https://github.com/floyernick
 
 .. |python version| image:: https://img.shields.io/badge/python-3-blue.svg
-.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.4.4-blue.svg
+.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.5.0-blue.svg
    :target: https://pypi.python.org/pypi/fleep
 .. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://github.com/floyernick/fleep/blob/master/LICENSE
