@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
     name="fleep",
-    version="0.5.0",
+    version="0.5.1",
     description="File format determination library",
     long_description=open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "README.rst"), "r").read(),
     url="https://github.com/floyernick/fleep",

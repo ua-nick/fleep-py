@@ -3,7 +3,7 @@ fleep
 
 File format determination library for Python
 
-|python version| |pypi version| |license|
+|pypi version| |python version| |license|
 
 Getting Started
 ---------------
@@ -248,15 +248,15 @@ Development Status
 
 fleep is in *Alpha* status, so we add new features quite often.
 
+Changelog
+---------
+
+You can find changelog in CHANGELOG.md file.
+
 License
 -------
 
 This project is licensed under the *MIT License*.
-
-Contributing
-------------
-
-It would be nice to determine more formats. You can help us to deal with it!
 
 Authors
 -------
@@ -265,8 +265,8 @@ Authors
 
 .. _GitHub profile: https://github.com/floyernick
 
-.. |python version| image:: https://img.shields.io/badge/python-3-blue.svg
-.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.5.0-blue.svg
+.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.5.1-blue.svg
    :target: https://pypi.python.org/pypi/fleep
+.. |python version| image:: https://img.shields.io/badge/python-3-blue.svg
 .. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://github.com/floyernick/fleep/blob/master/LICENSE
