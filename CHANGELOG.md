@@ -1,3 +1,9 @@
+##### 0.6.0 (2018-01-09)
+
+- Changed Development Status to Beta
+- Changed data.json structure
+- Improved docstrings
+
 ##### 0.5.1 (2018-01-07)
 
 - Added changelog (See CHANGELOG.md)

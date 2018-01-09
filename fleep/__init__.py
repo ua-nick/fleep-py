@@ -13,21 +13,20 @@ import json
 
 
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data.json")) as data_file:
-    data = json.loads(data_file.read())["data"]
+    data = json.loads(data_file.read())
 
 
 class Info:
     """
-    Does:
-        Generates object with given arguments
+    Generates object with given arguments
 
     Takes:
-        type_ -> list of file types
-        extension -> list of file extensions
-        mime -> list of file MIME types
+        type_ (list) -> list of file types
+        extension (list) -> list of file extensions
+        mime (list) -> list of file MIME types
 
     Returns:
-        Object
+        (<class 'fleep.Info'>) -> Class instance
     """
 
     def __init__(self, type_, extension, mime):
@@ -50,14 +49,13 @@ class Info:
 
 def get(obj):
     """
-    Does:
-        Determines file format and picks suitable file types, extensions and MIME types
+    Determines file format and picks suitable file types, extensions and MIME types
 
     Takes:
-        obj -> byte sequence (128 bytes are enough)
+        obj (bytes) -> byte sequence (128 bytes are enough)
 
     Returns:
-        Instance of class Info
+        (<class 'fleep.Info'>) -> Class instance
     """
 
     if not isinstance(obj, bytes):

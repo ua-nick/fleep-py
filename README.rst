@@ -70,7 +70,7 @@ You can find examples in *examples* folder. There is a simple example:
 Tests
 -----
 
-You can find tests in *tests* folder. There are results of *speed test*:
+You can find tests in *tests* folder. There are results of speed test:
 
 **Workstation**
 
@@ -246,12 +246,12 @@ There is a list of supported formats (in alphabetical order):
 Development Status
 ------------------
 
-fleep is in *Alpha* status, so we add new features quite often.
+fleep is in *Beta*, so current API is stable.
 
 Changelog
 ---------
 
-You can find changelog in CHANGELOG.md file.
+You can find changelog in *CHANGELOG.md* file.
 
 License
 -------
@@ -265,7 +265,7 @@ Authors
 
 .. _GitHub profile: https://github.com/floyernick
 
-.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.5.1-blue.svg
+.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.6.0-blue.svg
    :target: https://pypi.python.org/pypi/fleep
 .. |python version| image:: https://img.shields.io/badge/python-3-blue.svg
 .. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg
