@@ -243,11 +243,6 @@ There is a list of supported formats (in alphabetical order):
 
 -  SQLITE
 
-Development Status
-------------------
-
-fleep is in *Beta*, so current API is stable.
-
 Changelog
 ---------
 
@@ -265,7 +260,7 @@ Authors
 
 .. _GitHub profile: https://github.com/floyernick
 
-.. |pypi version| image:: https://img.shields.io/badge/pypi-v0.6.0-blue.svg
+.. |pypi version| image:: https://img.shields.io/badge/pypi-v1.0.0-blue.svg
    :target: https://pypi.python.org/pypi/fleep
 .. |python version| image:: https://img.shields.io/badge/python-3-blue.svg
 .. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg

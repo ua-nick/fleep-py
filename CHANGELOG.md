@@ -1,3 +1,7 @@
+##### 1.0.0 (2018-01-24)
+
+- Changed Development Status to Stable
+
 ##### 0.6.0 (2018-01-09)
 
 - Changed Development Status to Beta

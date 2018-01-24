@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
     name="fleep",
-    version="0.6.0",
+    version="1.0.0",
     description="File format determination library",
     long_description=open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "README.rst"), "r").read(),
     url="https://github.com/floyernick/fleep",
@@ -12,7 +12,7 @@ setuptools.setup(
     license="MIT",
     packages=["fleep"],
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
