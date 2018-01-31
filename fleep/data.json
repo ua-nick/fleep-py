@@ -1,7 +1,7 @@
 [
     {"type": "raster-image", "extension": "bmp", "mime": "image/bmp", "offset": 0, "signature": ["42 4D"]},
     {"type": "raster-image", "extension": "gif", "mime": "image/gif", "offset": 0, "signature": ["47 49 46 38"]},
-    {"type": "raster-image", "extension": "jpg", "mime": "image/jpeg", "offset": 0, "signature": ["FF D8 FF E0", "FF D8 FF E1", "FF D8 FF E2", "FF D8 FF E8"]},
+    {"type": "raster-image", "extension": "jpg", "mime": "image/jpeg", "offset": 0, "signature": ["FF D8 FF"]},
     {"type": "raster-image", "extension": "jp2", "mime": "image/jp2", "offset": 0, "signature": ["00 00 00 0C 6A 50 20 20"]},
     {"type": "raster-image", "extension": "png", "mime": "image/png", "offset": 0, "signature": ["89 50 4E 47 0D 0A 1A 0A"]},
     {"type": "raster-image", "extension": "webp", "mime": "image/webp", "offset": 8, "signature": ["57 45 42 50"]},

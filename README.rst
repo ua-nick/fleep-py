@@ -59,11 +59,11 @@ You can find examples in *examples* folder. There is a simple example:
     with open("png_image", "rb") as file:
         info = fleep.get(file.read(128))
 
-    print(info.type)  # prints ['image']
+    print(info.type)  # prints ['raster-image']
     print(info.extension)  # prints ['png']
     print(info.mime)  # prints ['image/png']
 
-    print(info.type_matches("image"))  # prints True
+    print(info.type_matches("raster-image"))  # prints True
     print(info.extension_matches("gif"))  # prints False
     print(info.mime_matches("image/png"))  # prints True
 
@@ -260,7 +260,7 @@ Authors
 
 .. _GitHub profile: https://github.com/floyernick
 
-.. |pypi version| image:: https://img.shields.io/badge/pypi-v1.0.0-blue.svg
+.. |pypi version| image:: https://img.shields.io/badge/pypi-v1.0.1-blue.svg
    :target: https://pypi.python.org/pypi/fleep
 .. |python version| image:: https://img.shields.io/badge/python-3-blue.svg
 .. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg
