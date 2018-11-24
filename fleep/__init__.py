@@ -77,7 +77,7 @@ def get(obj):
                     info[key][element[key]] = len(signature)
 
     for key in ["type", "extension", "mime"]:
-        info[key] = [element for element in sorted(info[key], key=info[key].get, reverse=True)]
+        info[key] = sorted(info[key], key=info[key].get, reverse=True)
 
     return Info(info["type"], info["extension"], info["mime"])
 
