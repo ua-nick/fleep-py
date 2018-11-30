@@ -10,6 +10,7 @@ License: MIT
 
 import os
 import json
+import sys
 
 
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data.json")) as data_file:
@@ -67,7 +68,10 @@ def get(obj):
         "mime": dict()
     }
 
-    stream = " ".join(['{:02X}'.format(byte) for byte in obj])
+    if sys.version_info[0] < 3:
+        obj = bytearray(obj)
+
+    stream = ' '.join(('{:02X}'.format(byte) for byte in obj))
 
     for element in data:
         for signature in element["signature"]:
