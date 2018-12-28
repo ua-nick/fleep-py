@@ -38,6 +38,7 @@
     {"type": "audio", "extension": "aac", "mime": "audio/aac", "offset": 0, "signature": ["FF F1", "FF F9"]},
     {"type": "audio", "extension": "midi", "mime": "audio/midi", "offset": 0, "signature": ["4D 54 68 64"]},
     {"type": "audio", "extension": "mp3", "mime": "audio/mpeg", "offset": 0, "signature": ["49 44 33"]},
+    {"type": "audio", "extension": "mp3", "mime": "audio/mpeg", "offset": 0, "signature": ["FF FB"]},
     {"type": "audio", "extension": "m4a", "mime": "audio/mp4", "offset": 4, "signature": ["66 74 79 70 4D 34 41 20"]},
     {"type": "audio", "extension": "oga", "mime": "audio/ogg", "offset": 0, "signature": ["4F 67 67 53 00 02 00 00"]},
     {"type": "audio", "extension": "wav", "mime": "audio/wav", "offset": 0, "signature": ["52 49 46 46"]},
