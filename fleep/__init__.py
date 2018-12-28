@@ -46,6 +46,9 @@ class Info:
         """ Checks if file MIME type matches with given MIME type """
         return mime in self.mime
 
+    def __str__(self):
+        return "type: {}, extension: {}, mime: {}".format(self.type, self.mime, self.extension)
+
 
 def get(obj):
     """
