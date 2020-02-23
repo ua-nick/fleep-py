@@ -53,6 +53,7 @@
     {"type": "video", "extension": "3gp", "mime": "video/3gpp", "offset": 4, "signature": ["66 74 79 70 33 67 70"]},
     {"type": "video", "extension": "avi", "mime": "video/avi", "offset": 8, "signature": ["41 56 49 20 4C 49 53 54"]},
     {"type": "video", "extension": "flv", "mime": "video/x-flv", "offset": 0, "signature": ["46 4C 56"]},
+    {"type": "video", "extension": "mxf", "mime": "application/mxf", "offset": 0, "signature": ["06 0E 2B 34"]},
     {"type": "video", "extension": "m4v", "mime": "video/mp4", "offset": 4, "signature": ["66 74 79 70 4D 34 56 20", "66 74 79 70 6D 70 34 32"]},
     {"type": "video", "extension": "mkv", "mime": "video/x-matroska", "offset": 31, "signature": ["6D 61 74 72 6F 73 6B 61"]},
     {"type": "video", "extension": "mov", "mime": "video/quicktime", "offset": 4, "signature": ["66 74 79 70 71 74 20 20", "6D 6F 6F 76", "66 72 65 65", "6D 64 61 74", "77 69 64 65", "70 6E 6F 74", "73 6B 69 70"]},
